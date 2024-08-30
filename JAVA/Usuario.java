@@ -1,32 +1,41 @@
+//Lucas Constante Serafim 253
+
 public class Usuario {
     private String nome;
     private int idade;
     private String cpf;
+    
+    public Usuario (String nome, int idade, String cpf) {
 
-    public Usuario(String nome, int idade , String cpf) {
         this.nome = nome;
         this.idade = idade;
-        this.cpf = cpf;
+        this.cpf = cpf ;
+
+
     }
 
-    public String getnome() {
-        return nome;
+    public String getNome(){
+
+            return nome;
     }
 
-    public int getidade() {
+    public int getIdade(){
         return idade;
+
     }
-    public String getcpf() {
+
+    public String getCpf(){
+
         return cpf;
     }
-
-    @Override
-    public String toString() {
-        return nome + "," + idade + "," + cpf;
-    }
-
-    public static Usuario fromString(String linha) {
-        String[] partes = linha.split(",");
-        return new Usuario(partes [0], Integer.parseInt(partes[1]), partes[2]);
-    }
+@Override 
+public String toString(){
+    return nome+","+idade+","+cpf;
 }
+    public static Usuario fromString(String linha) {
+
+String[]partes = linha.split(",");  
+return new Usuario (partes[0], Integer.parseInt(partes[1]),partes[2]);
+    }
+    }
+
